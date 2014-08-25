@@ -18,14 +18,19 @@ int main() {
     cout << *it << " ";
   cout << endl;
 
+  //instruction count
+  int count = 0;
 
   //we want to find i,j such that a[i] + b[j] = x
   cout << "Solution: " << endl;
   for (size_t i = 0;i < a.size();i++) {
     for (size_t j = 0;j < a.size();j++) {
+      count++;
       if (a[i] + b[j] == x) {
         cout << "a[" << i << "] + b[" << j << "] = " << x << endl;
       }
     }
   }
+
+  cout << "Count = " << count << endl;
 }
