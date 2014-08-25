@@ -7,7 +7,7 @@ using namespace std;
 int main() {
   vector<int> a = {1,2,3,4,5};
   vector<int> b = {6,3,5,1,2};
-  int x = 7;
+  int x = 10;
 
   //this is just a debug
   cout << "a = ";
@@ -20,6 +20,7 @@ int main() {
 
 
   //we want to find i,j such that a[i] + b[j] = x
+  cout << "Solution: " << endl;
   for (size_t i = 0;i < a.size();i++) {
     for (size_t j = 0;j < a.size();j++) {
       if (a[i] + b[j] == x) {
