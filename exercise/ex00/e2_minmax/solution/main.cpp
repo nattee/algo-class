@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 	}
 
 	int r1,c1,r2,c2;
+  //int max_r,max_c;
 	for (int i = 0; i < c; i++) {
     	scanf("%d %d %d %d",&r1,&c1,&r2,&c2);
     	if(r1 > r2 || c1 > c2)
@@ -41,18 +42,23 @@ int main(int argc, char *argv[])
     			c1 = 1;
     		if(c2 < 1)
     			c2 = 1;
-    		if(c1 > a)
-    			c1 = a;
-    		if(c2 > a)
-    			c2 = a;
+    		if(c1 > b)
+    			c1 = b;
+    		if(c2 > b)
+    			c2 = b;
     		int max = -INT_MAX;
+        //printf(" searching from row %d-->%d and col %d-->%d\n",r1,r2,c1,c2);
     		for(int i=r1-1;i<r2;i++) {
     			for(int j=c1-1;j<c2;j++) {
-    				if(max < foo[i][j])
+    				if(max < foo[i][j]) {
     					max = foo[i][j];
+              //max_r = i+1;
+              //max_c = j+1;
+            }
     			}
     		}
     		printf("%d\n",max);
+    		//printf("at r =  %d c = %d\n",max_r,max_c);
     	}
     }
 
