@@ -13,7 +13,7 @@ def genOneFile( name, n, repeat = false, out = false)
   end
 
   if repeat
-    (1 + rand(n)).times { a[rand(n)] = a[rand(n)] }
+    a[n/2] = a[rand(n/2)+n/2]
   end
 
 
