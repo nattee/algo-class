@@ -105,7 +105,7 @@ int check(int n, int gx, int gy){
 		// no error!
 		score = full_score;
 
-		printf("Correct\n\n");
+		printf("Correct\n%d\n",score);
 
 	} 
 	catch (int errno) {	// some error in the code!
