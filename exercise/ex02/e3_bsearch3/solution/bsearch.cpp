@@ -7,7 +7,7 @@ int bs(vector<int> &v,int left,int right,int x,int ans) {
   if (left > right) return ans;
   int mid = (left+right)/2;
   if (v[mid] > x) return bs(v,left,mid-1,x,ans);
-  if (v[mid] > ans) ans = mid;
+  if (mid > ans) ans = mid;
   return bs(v,mid+1,right,x,ans);
 }
 
