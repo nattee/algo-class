@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int table[32][32];
+int table[102][102];
 
 int barcode_topdown(int n,int k,int m) {
   if (n <= 0) return 0;
