@@ -25,4 +25,4 @@ while (w_bag > 0) do
   end
 end
 
-puts sum
+printf "%.4f\n",sum
