@@ -6,7 +6,9 @@
 using namespace std;
 
 bool comp(const pair<int,int> &a,const pair<int,int> &b) {
-  return a.second < b.second;
+  if (a.second < b.second) return true;
+  if (a.second == b.second) return a.first < b.first;
+  return false;
 }
 
 int main() {
@@ -24,6 +26,10 @@ int main() {
     cin >> intv[i].second;
 
   sort(intv.begin(),intv.end(),comp);
+
+  for (int i = 0;i < n;i++) {
+    //printf("%d %d\n",intv[i].first,intv[i].second);
+  }
   int count = 1;
   int last = 0;
   for (int i = 1;i < n;i++) {
