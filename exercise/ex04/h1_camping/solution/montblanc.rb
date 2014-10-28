@@ -8,6 +8,7 @@ max_dist = 0
 (0...camp.size-1).each do |i|
   max_dist = [max_dist,camp[i+1]-camp[i]].max
 end
+max_dist = [camp[0],max_dist].max
 
 def days(k,camp,max_dist)
   return VERY_LARGE if k < max_dist
