@@ -1,7 +1,10 @@
 def genOneFile(filename, n, max = [n,10].max)
   File.open(filename,"w") do |file|
     file.puts n
-    a = n.times.map{ s = rand(max-1); f = rand(max-s) + s; [s,f] }
+    a = n.times.map{ s = rand(max-1); f = rand(max-s) + s + 1; [s,f] }
+    a.each do |x|
+      $stderr.puts "fuck" if x[0] == x[1]
+    end
     s = a.collect{ |x| x[0] }
     f = a.collect{ |x| x[1] }
     file.puts s.join ' '
