@@ -40,11 +40,11 @@ float fractional(int m,float w) {
 }
 
 void search(vector<int> &x,int m,float sum_w,float sum_v) {
+  //backtracking
+  if (sum_w > W) return ;
   if (m == (int)items.size()) {
     if (sum_v > max_v) max_v = sum_v;
   } else {
-    //backtracking
-    if (sum_w > W) return ;
     //bound
     //float heuristic = sum_remain[m];                       //bounding 1, using remaining value
     float heuristic = fractional(m,W-sum_w);             //bounding 2 (better), using fracktional knapsack of the remaining
@@ -76,12 +76,12 @@ int main() {
   }
 
   ///make cache for sum remaining weight
-  sum_remain[n-1] = items[n-1].w;
+  sum_remain[n-1] = items[n-1].v;
   for (int i = n-2;i >= 0;i--)
-    sum_remain[i] = items[i].w + sum_remain[i+1];
+    sum_remain[i] = items[i].v + sum_remain[i+1];
 
   vector<int> x(n,0);
 
   search(x,0,0,0);
-  cout << max_v << endl;
+  printf("%.4f\n",max_v);
 }
