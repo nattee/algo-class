@@ -15,7 +15,7 @@ bool search(int idx,vector<int> &color,int max_color) {
       //check if the vertex idx can be of color i
       bool possible = true;
       for (auto &to : e[idx]) {
-        if (color[to] == i) {
+        if (color[to] == i && to < idx) {
           possible = false;
           break;
         }

@@ -15,12 +15,12 @@ end
 
 
 genOneFile 'data/1.in',4,6
-genOneFile 'data/2.in',50,0
+genOneFile 'data/2.in',15,0
 genOneFile 'data/3.in',15
-genOneFile 'data/4.in',20
-genOneFile 'data/5.in',25
-genOneFile 'data/6.in',30
-genOneFile 'data/7.in',35
-genOneFile 'data/8.in',40
-genOneFile 'data/9.in',50
-genOneFile 'data/10.in',50
+genOneFile 'data/4.in',15
+genOneFile 'data/5.in',15
+genOneFile 'data/6.in',15
+genOneFile 'data/7.in',15
+genOneFile 'data/8.in',15
+genOneFile 'data/9.in',15
+genOneFile 'data/10.in',15
