@@ -1,9 +1,9 @@
-def genOneFile(filename,n,max = 1000)
+def genOneFile(filename,n,max = 1000,min = 0)
   puts "gen #{filename}"
   File.open(filename,'w') do |f|
     f.puts n
     (n-1).times do |i|
-      f.puts (n - i - 1).times.map{ rand(max) }.join ' '
+      f.puts (n - i - 1).times.map{ min + rand(max-min) }.join ' '
     end
   end
 end
@@ -16,6 +16,6 @@ genOneFile('data/4.in',100);
 genOneFile('data/5.in',200);
 genOneFile('data/6.in',300);
 genOneFile('data/7.in',400);
-genOneFile('data/8.in',500, 2);
+genOneFile('data/8.in',500, 3,1);
 genOneFile('data/9.in',700, 1);
 genOneFile('data/10.in',1000);
