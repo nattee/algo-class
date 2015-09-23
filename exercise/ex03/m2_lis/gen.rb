@@ -1,7 +1,12 @@
 def genOneFile( filename, n, max = n*10)
+  max = n if max < n
   File.open(filename,"w") do |file|
     file.puts n
-    file.puts n.times.map{ rand(max) }.join(' ')
+    arr = {}
+    while arr.size != n
+      arr[rand(max)] = 1
+    end
+    file.puts arr.keys.shuffle.join ' '
   end
 end
 
